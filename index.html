@@ -15,15 +15,17 @@
     <h1>🌱 Plant-Mois</h1>
 
     <input id="thresholdInput" type="number" placeholder="Enter moisture threshold (0–100)" />
-    
+
     <button id="overwriteBtn">💾 Set Threshold</button>
     <button id="motorOnBtn">🔛 Turn Motor ON</button>
     <button id="motorOffBtn">🔴 Turn Motor OFF</button>
 
     <div class="threshold">Current Threshold: <span id="currentThreshold">--</span></div>
-    <div class="status" id="status">Status: Waiting for action...</div>
+    <div class="status">Motor Status: <span id="motorStatus">--</span></div>
+    <div class="status">System Status: <span id="systemStatus">Waiting for action...</span></div>
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
+
