@@ -50,4 +50,14 @@ const firebaseConfig = {
     const value = snapshot.val();
     currentThresholdDisplay.textContent = value ?? "--";
   });
+// Realtime motor status updates
+database.ref("/motor").on("value", (snapshot) => {
+  const motorStatus = snapshot.val();
+  if (motorStatus === "on" || motorStatus === "off") {
+    statusDisplay.textContent = `Motor Status: ${motorStatus.toUpperCase()}`;
+  } else {
+    statusDisplay.textContent = `Motor Status: Unknown`;
+  }
+});
+
   
