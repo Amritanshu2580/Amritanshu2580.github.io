@@ -17,15 +17,29 @@
     <input id="thresholdInput" type="number" placeholder="Enter moisture threshold (0–100)" />
 
     <button id="overwriteBtn">💾 Set Threshold</button>
-    <button id="motorOnBtn">🔛 Turn Motor ON</button>
-    <button id="motorOffBtn">🔴 Turn Motor OFF</button>
+    <div class="button-group">
+      <button id="motorOnBtn">🔛 Turn Motor ON</button>
+      <button id="motorOffBtn">🔴 Turn Motor OFF</button>
+    </div>
+
+    <div class="button-group">
+      <button id="autoModeBtn" class="on">🔄 Auto Mode</button>
+      <button id="manualModeBtn" class="off">🔒 Manual Mode</button>
+    </div>
 
     <div class="threshold">Current Threshold: <span id="currentThreshold">--</span></div>
     <div class="status">Motor Status: <span id="motorStatus">--</span></div>
     <div class="status">System Status: <span id="systemStatus">Waiting for action...</span></div>
+
+    <!-- Log Section -->
+    <div class="log-section">
+      <h2>📜 Activity Log</h2>
+      <div id="logBox" class="log-box">
+        <p>Loading logs...</p>
+      </div>
+    </div>
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
-
